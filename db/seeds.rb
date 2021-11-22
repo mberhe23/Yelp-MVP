@@ -10,15 +10,15 @@ puts 'Creating restaurants'
 
 
 10.times do
-
   categories = ["chinese", "italian", "japanese", "french", "belgian"]
 
   restaurant = Restaurant.create(
     name: Faker::Restaurant.name,
     address: Faker::Address.street_address,
-    phone_number: Faker::PhoneNumber.phone_number_with_country_code,
-    category: categories.sample,
+    phone_number: Faker::PhoneNumber.cell_phone,
+    category: categories.sample
   )
+  restaurant.save!
   puts "restaurant #{restaurant.id} is created"
 end
 

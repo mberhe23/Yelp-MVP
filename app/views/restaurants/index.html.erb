@@ -1,0 +1,6 @@
+<h1>Restaurants#index</h1>
+<% @restaurants.each do |restaurant|%>
+  <p><%= restaurant.name %><%= restaurant.address %><%= restaurant.rating %>
+    <%= link_to "", @book %>
+  </p>
+<% end %>
